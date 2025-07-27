@@ -1085,25 +1085,14 @@ if __name__ == "__main__":
     print("\n" + "=" * 50)
     print("🎯 Server Features:")
     print("   • Comprehensive error handling and validation")
-    print("    encrypted successfully")
-            print(f"   🔒 Key: {result['encryption_key'][:32]}...")
-            
-        elif operation.lower() == 'decrypt':
-            if key is None:
-                raise ValueError("Encryption key is required for decryption")
-            
-            encryption_key = key.encode() if isinstance(key, str) else key
-            fernet = Fernet(encryption_key)
-            
-            # Assume text is the encrypted data
-            decrypted_data = fernet.decrypt(text.encode())
-            
-            result = {
-                "operation": "decrypt",
-                "encrypted_data": text[:50] + "..." if len(text) > 50 else text,
-                "decrypted_text": decrypted_data.decode(),
-                "encryption_key": key[:32] + "..." if len(key) > 32 else key,
-                "timestamp": datetime.now().isoformat()
-            }
-            
-            print(f"✅ Text
+    print("   • Detailed logging and progress tracking") 
+    print("   • Flexible configuration options")
+    print("   • Security-focused design")
+    print("   • Performance optimized operations")
+    print("   • Real-world utility functions")
+    print("\n🚀 Starting MCP server...")
+    print("   Press Ctrl+C to stop the server")
+    print("=" * 50)
+    
+    # Run the server
+    mcp.run()
